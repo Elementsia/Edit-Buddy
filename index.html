@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Down for maintenance!</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .section {
+            text-align: center;
+            padding: 10px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #666;
+            font-size: 30px;
+            max-width: 1300;
+            width: 90%;
+            height: 280px;
+            background: linear-gradient(to right, yellow, orange);
+            border: 2px dotted #666;
+            border-radius: 10px;
+            transform: translateX(-100%); /* Initial position outside the viewport */
+            animation: slideIn 1s ease-in-out forwards; /* Apply animation */
+        }
+
+        @media (max-width: 768px) {
+            .section {
+                font-size: 18px;
+                height: auto;
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(-100%); /* Start from outside the viewport on the left */
+            }
+            to {
+                transform: translateX(0); /* Move to its final position */
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="section">
+        <img id="img" src="https://media.discordapp.net/attachments/1101785167233826846/1171499493234053140/image.png?ex=655ce6ec&is=654a71ec&hm=f120024da53b220287088790e4a1925a312dff93b5356e406c48d4e7c1ff93b2&=" alt="An example image">
+        <p>Sorry! This website is down for maintenance.</p>
+    </section>
+</body>
+</html>
